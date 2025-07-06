@@ -1,0 +1,532 @@
+{
+  "$schema": "http://localhost:9000/schemas/PatientIntakeGraphDescription.json",
+  "id": "pi_01jk766tckfwx84xjcxazggzyc",
+  "tenant_id": "1",
+  "name": "Patient Intake Workflow",
+  "description": "New patient registration and intake process",
+  "category": "Healthcare",
+  "nodes": [
+    {
+      "id": "form-bad163fd-09bd-4710-ad80-245f31b797d5",
+      "type": "form",
+      "position": {
+        "x": 1437,
+        "y": 264
+      },
+      "data": {
+        "id": "pi_c_01jka1e3jwewhb2177h7901c5j",
+        "component_key": "form-bad163fd-09bd-4710-ad80-245f31b797d5",
+        "component_type": "form",
+        "component_id": "f_01jk7ap2r3ewf9gx6a9r09gzjv",
+        "name": "Schedule Appointment",
+        "prerequisites": [
+          "form-0f58384c-4966-4ce6-9ec2-40b96d61f745",
+          "form-e15d42df-c7c0-4819-9391-53730e6d47b3"
+        ],
+        "permitted_roles": [],
+        "input_mapping": {},
+        "sla_duration": {
+          "number": 0,
+          "unit": "minutes"
+        },
+        "approval_required": false,
+        "approval_roles": []
+      }
+    },
+    {
+      "id": "form-0f58384c-4966-4ce6-9ec2-40b96d61f745",
+      "type": "form",
+      "position": {
+        "x": 1093.4015147514929,
+        "y": 155.2205909169969
+      },
+      "data": {
+        "id": "pi_c_01jka1e3jzewhb9eqfq08rk90b",
+        "component_key": "form-0f58384c-4966-4ce6-9ec2-40b96d61f745",
+        "component_type": "form",
+        "component_id": "f_01jk7ap2r3ewf9gx6a9r09gzjv",
+        "name": "Current Symptoms",
+        "prerequisites": [
+          "form-a4750667-d774-40fb-9b0a-44f8539ff6c4"
+        ],
+        "permitted_roles": [],
+        "input_mapping": {},
+        "sla_duration": {
+          "number": 0,
+          "unit": "minutes"
+        },
+        "approval_required": false,
+        "approval_roles": []
+      }
+    },
+    {
+      "id": "form-47c61d17-62b0-4c42-8ca2-0eff641c9d88",
+      "type": "form",
+      "position": {
+        "x": 494,
+        "y": 269
+      },
+      "data": {
+        "id": "pi_c_01jka1e3k0ewha8jbgeayz4cwp",
+        "component_key": "form-47c61d17-62b0-4c42-8ca2-0eff641c9d88",
+        "component_type": "form",
+        "component_id": "f_01jk7ap2r3ewf9gx6a9r09gzjv",
+        "name": "Patient Information",
+        "prerequisites": [],
+        "permitted_roles": [],
+        "input_mapping": {},
+        "sla_duration": {
+          "number": 0,
+          "unit": "minutes"
+        },
+        "approval_required": false,
+        "approval_roles": []
+      }
+    },
+    {
+      "id": "form-7c26f280-7bff-40e3-b9a5-0533136f52c3",
+      "type": "form",
+      "position": {
+        "x": 779.0096360025458,
+        "y": 362.36545334182
+      },
+      "data": {
+        "id": "pi_c_01jka1e3k1ewhbfr03fcxg8qze",
+        "component_key": "form-7c26f280-7bff-40e3-b9a5-0533136f52c3",
+        "component_type": "form",
+        "component_id": "f_01jk7aygnqewh8gt8549beb1yc",
+        "name": "Insurance Information",
+        "prerequisites": [
+          "form-47c61d17-62b0-4c42-8ca2-0eff641c9d88"
+        ],
+        "permitted_roles": [],
+        "input_mapping": {},
+        "sla_duration": {
+          "number": 0,
+          "unit": "minutes"
+        },
+        "approval_required": false,
+        "approval_roles": []
+      }
+    },
+    {
+      "id": "form-a4750667-d774-40fb-9b0a-44f8539ff6c4",
+      "type": "form",
+      "position": {
+        "x": 780.692362673456,
+        "y": 154.98072799490808
+      },
+      "data": {
+        "id": "pi_c_01jka1e3k2ewha2z3p674dbyrx",
+        "component_key": "form-a4750667-d774-40fb-9b0a-44f8539ff6c4",
+        "component_type": "form",
+        "component_id": "f_01jk7awbhqewgbkbgk8rjm7bv7",
+        "name": "Medical History",
+        "prerequisites": [
+          "form-47c61d17-62b0-4c42-8ca2-0eff641c9d88"
+        ],
+        "permitted_roles": [],
+        "input_mapping": {},
+        "sla_duration": {
+          "number": 0,
+          "unit": "minutes"
+        },
+        "approval_required": false,
+        "approval_roles": []
+      }
+    },
+    {
+      "id": "form-e15d42df-c7c0-4819-9391-53730e6d47b3",
+      "type": "form",
+      "position": {
+        "x": 1099.7646441474558,
+        "y": 361.86975131228957
+      },
+      "data": {
+        "id": "pi_c_01jka1e3k3ewhbpfxt533q5hcw",
+        "component_key": "form-e15d42df-c7c0-4819-9391-53730e6d47b3",
+        "component_type": "form",
+        "component_id": "f_01jk7ap2r3ewf9gx6a9r09gzjv",
+        "name": "Consent Forms",
+        "prerequisites": [
+          "form-7c26f280-7bff-40e3-b9a5-0533136f52c3"
+        ],
+        "permitted_roles": [],
+        "input_mapping": {},
+        "sla_duration": {
+          "number": 0,
+          "unit": "minutes"
+        },
+        "approval_required": false,
+        "approval_roles": []
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "form-0f58384c-4966-4ce6-9ec2-40b96d61f745",
+      "target": "form-bad163fd-09bd-4710-ad80-245f31b797d5"
+    },
+    {
+      "source": "form-e15d42df-c7c0-4819-9391-53730e6d47b3",
+      "target": "form-bad163fd-09bd-4710-ad80-245f31b797d5"
+    },
+    {
+      "source": "form-a4750667-d774-40fb-9b0a-44f8539ff6c4",
+      "target": "form-0f58384c-4966-4ce6-9ec2-40b96d61f745"
+    },
+    {
+      "source": "form-47c61d17-62b0-4c42-8ca2-0eff641c9d88",
+      "target": "form-7c26f280-7bff-40e3-b9a5-0533136f52c3"
+    },
+    {
+      "source": "form-47c61d17-62b0-4c42-8ca2-0eff641c9d88",
+      "target": "form-a4750667-d774-40fb-9b0a-44f8539ff6c4"
+    },
+    {
+      "source": "form-7c26f280-7bff-40e3-b9a5-0533136f52c3",
+      "target": "form-e15d42df-c7c0-4819-9391-53730e6d47b3"
+    }
+  ],
+  "forms": [
+    {
+      "id": "f_01jk7ap2r3ewf9gx6a9r09gzjv",
+      "name": "patient_intake_form",
+      "description": "Patient intake and appointment scheduling",
+      "is_reusable": false,
+      "field_schema": {
+        "type": "object",
+        "properties": {
+          "preferred_doctor": {
+            "avantos_type": "single-select",
+            "title": "Preferred Doctor",
+            "type": "string",
+            "enum": ["Dr. Smith", "Dr. Johnson", "Dr. Williams", "Any Available"]
+          },
+          "appointment_type": {
+            "avantos_type": "single-select",
+            "title": "Appointment Type",
+            "type": "string",
+            "enum": ["General Consultation", "Specialist", "Follow-up", "Urgent Care"]
+          },
+          "preferred_date": {
+            "avantos_type": "date",
+            "title": "Preferred Date",
+            "type": "string",
+            "format": "date"
+          },
+          "preferred_time": {
+            "avantos_type": "single-select",
+            "title": "Preferred Time",
+            "type": "string",
+            "enum": ["Morning (8-12)", "Afternoon (12-5)", "Evening (5-8)"]
+          },
+          "reason_for_visit": {
+            "avantos_type": "multi-line-text",
+            "title": "Reason for Visit",
+            "type": "string"
+          },
+          "patient_id": {
+            "avantos_type": "short-text",
+            "title": "Patient ID",
+            "type": "string"
+          },
+          "email": {
+            "avantos_type": "short-text",
+            "format": "email",
+            "title": "Email",
+            "type": "string"
+          },
+          "phone": {
+            "avantos_type": "short-text",
+            "title": "Phone",
+            "type": "string"
+          }
+        },
+        "required": [
+          "appointment_type",
+          "preferred_date",
+          "patient_id"
+        ]
+      },
+      "ui_schema": {
+        "type": "VerticalLayout",
+        "elements": [
+          {
+            "type": "Control",
+            "scope": "#/properties/preferred_doctor",
+            "label": "Preferred Doctor"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/appointment_type",
+            "label": "Appointment Type"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/preferred_date",
+            "label": "Preferred Date"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/preferred_time",
+            "label": "Preferred Time"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/reason_for_visit",
+            "label": "Reason for Visit"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/patient_id",
+            "label": "Patient ID"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/email",
+            "label": "Email"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/phone",
+            "label": "Phone"
+          }
+        ]
+      },
+      "dynamic_field_config": {}
+    },
+    {
+      "id": "f_01jk7awbhqewgbkbgk8rjm7bv7",
+      "name": "medical_history_form",
+      "description": "Patient medical history",
+      "is_reusable": false,
+      "field_schema": {
+        "type": "object",
+        "properties": {
+          "chronic_conditions": {
+            "avantos_type": "checkbox-group",
+            "items": {
+              "enum": [
+                "Diabetes",
+                "Hypertension",
+                "Heart Disease",
+                "Asthma",
+                "None"
+              ],
+              "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+          },
+          "allergies": {
+            "avantos_type": "multi-line-text",
+            "title": "Known Allergies",
+            "type": "string"
+          },
+          "current_medications": {
+            "avantos_type": "multi-line-text",
+            "title": "Current Medications",
+            "type": "string"
+          },
+          "patient_id": {
+            "avantos_type": "short-text",
+            "title": "Patient ID",
+            "type": "string"
+          },
+          "patient_name": {
+            "avantos_type": "short-text",
+            "title": "Patient Name",
+            "type": "string"
+          },
+          "email": {
+            "avantos_type": "short-text",
+            "format": "email",
+            "title": "Email",
+            "type": "string"
+          },
+          "previous_surgeries": {
+            "avantos_type": "multi-line-text",
+            "title": "Previous Surgeries",
+            "type": "string"
+          },
+          "family_history": {
+            "avantos_type": "multi-select",
+            "items": {
+              "enum": [
+                "Cancer",
+                "Heart Disease",
+                "Diabetes",
+                "Mental Health",
+                "None"
+              ],
+              "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "patient_id",
+          "patient_name",
+          "chronic_conditions"
+        ]
+      },
+      "ui_schema": {
+        "type": "VerticalLayout",
+        "elements": [
+          {
+            "type": "Control",
+            "scope": "#/properties/patient_id",
+            "label": "Patient ID"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/patient_name",
+            "label": "Patient Name"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/email",
+            "label": "Email"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/chronic_conditions",
+            "label": "Chronic Conditions"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/allergies",
+            "label": "Known Allergies"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/current_medications",
+            "label": "Current Medications"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/previous_surgeries",
+            "label": "Previous Surgeries"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/family_history",
+            "label": "Family History",
+            "options": {
+              "format": "multi-select"
+            }
+          }
+        ]
+      },
+      "dynamic_field_config": {}
+    },
+    {
+      "id": "f_01jk7aygnqewh8gt8549beb1yc",
+      "name": "insurance_form",
+      "description": "Insurance information",
+      "is_reusable": false,
+      "field_schema": {
+        "type": "object",
+        "properties": {
+          "insurance_provider": {
+            "avantos_type": "short-text",
+            "title": "Insurance Provider",
+            "type": "string"
+          },
+          "policy_number": {
+            "avantos_type": "short-text",
+            "title": "Policy Number",
+            "type": "string"
+          },
+          "group_number": {
+            "avantos_type": "short-text",
+            "title": "Group Number",
+            "type": "string"
+          },
+          "policy_holder_name": {
+            "avantos_type": "short-text",
+            "title": "Policy Holder Name",
+            "type": "string"
+          },
+          "patient_id": {
+            "avantos_type": "short-text",
+            "title": "Patient ID",
+            "type": "string"
+          },
+          "patient_name": {
+            "avantos_type": "short-text",
+            "title": "Patient Name",
+            "type": "string"
+          },
+          "email": {
+            "avantos_type": "short-text",
+            "format": "email",
+            "title": "Email",
+            "type": "string"
+          },
+          "relationship_to_patient": {
+            "avantos_type": "single-select",
+            "title": "Relationship to Patient",
+            "type": "string",
+            "enum": ["Self", "Spouse", "Parent", "Child", "Other"]
+          }
+        },
+        "required": [
+          "insurance_provider",
+          "policy_number",
+          "patient_id"
+        ]
+      },
+      "ui_schema": {
+        "type": "VerticalLayout",
+        "elements": [
+          {
+            "type": "Control",
+            "scope": "#/properties/patient_id",
+            "label": "Patient ID"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/patient_name",
+            "label": "Patient Name"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/email",
+            "label": "Email"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/insurance_provider",
+            "label": "Insurance Provider"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/policy_number",
+            "label": "Policy Number"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/group_number",
+            "label": "Group Number"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/policy_holder_name",
+            "label": "Policy Holder Name"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/relationship_to_patient",
+            "label": "Relationship to Patient"
+          }
+        ]
+      },
+      "dynamic_field_config": {}
+    }
+  ],
+  "branches": [],
+  "triggers": []
+}

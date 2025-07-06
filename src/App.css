@@ -1,0 +1,370 @@
+/* App.css - Patient Intake System Theme */
+
+/* Root variables for medical theme */
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #00b4d8;
+  --success-color: #52b788;
+  --warning-color: #f77f00;
+  --danger-color: #d62828;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+h1 {
+  background-color: var(--primary-color);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Forms panel */
+.forms-panel {
+  flex: 1;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+.forms-panel h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+/* Form cards */
+.form-card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0,119,182,0.1);
+  transform: translateY(-2px);
+}
+
+.form-card.selected {
+  border-color: var(--primary-color);
+  background-color: #e7f3ff;
+  box-shadow: 0 4px 8px rgba(0,119,182,0.2);
+}
+
+.form-card h3 {
+  margin: 0 0 10px 0;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.form-card p {
+  margin: 5px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Configuration panel */
+.config-panel {
+  flex: 2;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+.config-panel h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.config-panel h3 {
+  color: var(--primary-color);
+  margin-top: 20px;
+}
+
+.config-panel h4 {
+  color: var(--text-primary);
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Fields section */
+.fields-section {
+  margin-top: 30px;
+}
+
+.field-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: var(--background-color);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.field-item:hover {
+  background-color: #f0f8ff;
+  border-color: var(--secondary-color);
+}
+
+.field-info {
+  flex: 1;
+}
+
+.field-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-right: 10px;
+}
+
+.field-type {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.field-required {
+  color: var(--danger-color);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.field-prefill-status {
+  color: var(--success-color);
+  font-size: 14px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Field actions */
+.field-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.prefill-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-configure {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-configure:hover {
+  background-color: #005f8a;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-edit-prefill {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-edit-prefill:hover {
+  background-color: #0096c7;
+}
+
+.btn-remove-prefill {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-remove-prefill:hover {
+  background-color: #bb2d2d;
+}
+
+/* Medical-specific styling */
+.no-fields {
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--background-color);
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .forms-panel,
+  .config-panel {
+    max-height: none;
+  }
+}
+
+/* Loading and error states */
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--danger-color);
+}
+
+/* Part 9.2: Loading Spinner */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Part 9.4: Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, -45%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Part 9.5: Performance - Smooth transitions */
+* {
+  box-sizing: border-box;
+}
+
+.form-card,
+.field-item,
+button {
+  transition: all 0.2s ease;
+}
+
+/* Accessibility improvements */
+.form-card:focus,
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Prevent layout shift */
+.notification {
+  will-change: transform;
+}
+
+.modal {
+  will-change: transform, opacity;
+}
+
+/* Print styles */
+@media print {
+  .modal-backdrop,
+  .notification,
+  button {
+    display: none !important;
+  }
+  
+  .container {
+    display: block;
+  }
+  
+  .forms-panel,
+  .config-panel {
+    page-break-inside: avoid;
+  }
+}
